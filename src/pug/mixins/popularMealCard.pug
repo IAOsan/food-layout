@@ -1,0 +1,5 @@
+mixin popularMeal(img, name)
+   article.mealCard
+      img.mealCard__img(src=`assets/img/${img}`, alt=`${name}`)
+      h3.mealCard__name #{name}
+      button.btn.mealCard__btn(type="submit") Order now

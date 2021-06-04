@@ -1,0 +1,5 @@
+section.popularMeals
+   h2.section__title Popular Meals
+   .popularMeals__grid
+      each meal in popularMeals 
+         +popularMeal(meal.img, meal.name)

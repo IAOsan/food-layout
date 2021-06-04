@@ -1,0 +1,48 @@
+.footer {
+   width: 100%;
+   height: 30vh;
+   padding: 3rem 0;
+   background-color: var(--c-primary-d);
+   color: white;
+   // flexbox
+   display: flex;
+   justify-content: space-around;
+   flex-wrap: wrap;
+   align-content: space-between;
+
+   @include respond(992) {
+      height: 22vh;
+   }
+   @include respond(576) {
+      height: auto;
+   }
+   &__text {
+      text-transform: uppercase;
+      @include respond(576) {
+         text-align: center;
+         margin-bottom: 2rem;
+      }
+   }
+   &__heading {
+      font-size: 4rem;
+      font-weight: 900;
+      color: var(--c-secondary);
+      @include respond(992) {
+         font-size: 3.5vw;
+      }
+   }
+   &__paragraph {
+      font-size: 1.5rem;
+      color: var(--c-grey-1);
+   }
+}
+.copyright {
+   flex: 0 0 100%;
+   text-align: center;
+   font-size: 1.7rem;
+   font-weight: 200;
+   color: #eee;
+   letter-spacing: 0.1rem;
+   border-top: 1px solid #888;
+   padding-top: 3rem;
+}
