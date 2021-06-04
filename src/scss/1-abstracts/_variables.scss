@@ -1,0 +1,21 @@
+:root {
+   // colors
+   --c-primary: #333;
+   --c-primary-d: #222;
+   --c-primary-dd: #111;
+   --c-secondary: #a79a2d;
+   --c-secondary-d: #817824;
+   --c-secondary-dd: #8f8317;
+   --c-grey-1: #888;
+   // fonts
+   --f-nunito: 'Nunito', sans-serif;
+   // general
+   --t-shadow-xs: 0.15rem 0.15rem 0.15rem #000;
+   --t-shadow: 0.3rem 0.3rem 0.3rem #000;
+   --t-shadow-s: 0.2rem 0.2rem 0.2rem #000;
+   --t-shadow-lg: 1rem 1rem 1rem #000;
+   --t-shadow-xl: 2rem 2rem 2rem #000;
+   --transition: all 300ms ease-in-out;
+   --transition-s: all 500ms ease-in-out;
+   --transition-f: all 200ms ease-in-out;
+}

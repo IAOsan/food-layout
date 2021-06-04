@@ -1,0 +1,105 @@
+.navbar {
+   height: 14rem;
+   background-color: #000;
+   position: fixed;
+   top: -100%;
+   left: 0;
+   right: 0;
+   z-index: 50;
+   box-shadow: var(--t-shadow-s);
+   transition: var(--transition-s);
+   transition-timing-function: cubic-bezier(0.65, 0.05, 0.36, 1);
+   // flexbox
+   display: flex;
+   justify-content: center;
+   align-items: center;
+
+   &__link {
+      text-decoration: none;
+      color: #aaa;
+      margin: 0 4rem;
+      text-align: center;
+      transition: var(--transition-f);
+      opacity: 0;
+
+      @include respond(768) {
+         margin: 0 3vw;
+      }
+      @include respond(576) {
+         margin: 0 1.5vw;
+      }
+      &:hover {
+         color: #fff;
+      }
+   }
+   &__icon {
+      font-size: 6rem;
+      display: inline-block;
+
+      @include respond(768) {
+         font-size: 7vw;
+      }
+   }
+   &__iconName {
+      display: block;
+      font-size: 2rem;
+      font-weight: 900;
+      letter-spacing: 0.5rem;
+      margin-top: 0.5rem;
+   }
+}
+.menu {
+   width: 4rem;
+   height: 6rem;
+   background-color: #000;
+   position: fixed;
+   top: 2rem;
+   left: 5rem;
+   border-radius: 2rem 2rem 1rem 1rem;
+   box-shadow: var(--t-shadow-xs), -0.1rem -0.1rem -0.1rem #000;
+   cursor: pointer;
+   position: relative;
+   transition: var(--transition-s);
+   transition-timing-function: cubic-bezier(1, -0.29, 0, 1.39);
+   @include respond(576) {
+      left: 2rem;
+   }
+   &::before {
+      content: '';
+      width: 0.5rem;
+      height: 15rem;
+      background-color: #000;
+      position: absolute;
+      top: -15rem;
+      left: calc(50% - 0.25rem);
+      box-shadow: 0.1rem 0 0.1rem #000;
+   }
+}
+// ** importate tener el selector de esta manera **
+// anima los iconos 1 a 1
+.target--change .navbar__link {
+   opacity: 1;
+   &:nth-child(1) {
+      transition: all 0.4s 0.5s, color 0.3s; //portque sobreescribe el valor origial del selector
+   }
+   &:nth-child(2) {
+      transition: all 0.4s 0.6s, color 0.3s;
+   }
+   &:nth-child(3) {
+      transition: all 0.4s 0.7s, color 0.3s;
+   }
+   &:nth-child(4) {
+      transition: all 0.4s 0.8s, color 0.3s;
+   }
+   &:nth-child(5) {
+      transition: all 0.4s 0.9s, color 0.3s;
+   }
+}
+.navbar.target--change {
+   top: 0;
+   transition: all 0.6s ease-in-out;
+   transition-timing-function: cubic-bezier(0.65, 0.05, 0.36, 1);
+}
+.menu.target--change {
+   top: 15rem;
+}

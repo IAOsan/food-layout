@@ -1,0 +1,8 @@
+section.gallery 
+   h2.section__title Gallery
+   .gallery__grid 
+      each link in galleryLinks 
+         a.gallery__link(rel="stylesheet", href="#" title="Order now")
+            img.gallery__img(src=`assets/img/${link.img}`, alt=`${link.name}`)
+            h3.gallery__foodName #{link.name}
+            p.gallery__foodDesc Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea iure voluptates recusandae amet aperiam ipsum?
